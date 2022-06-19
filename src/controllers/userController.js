@@ -21,7 +21,7 @@ const signup = async (req, res) => {
         const existingUser = await userModel.findOne({email : email}); // await to wait for the result (make sure parent function asynchronous)
         if(existingUser){
             //sending json 400 -> for bad request
-            return res.status(400).json({messsage: "User Already Exists"});n
+            return res.status(400).json({message: "User Already Exists"});n
         }
         //generating hashed password
         const hashedPassword = await bcrypt.hash(password, 10);//asynchronous function hash
