@@ -39,7 +39,7 @@ const signup = async (req, res) => {
     } catch (error) {
         console.log(error);
         //sending json 
-        res.status(500).json({messsage: "Something Wrong"});
+        res.status(500).json({message: "Something Wrong"});
     }
 }
 //defining signin function
@@ -68,7 +68,7 @@ const signin =async (req, res) =>{
     } catch (error) {
         console.log(error);
         //sending json
-        res.status(500).json({messsage: "Something Wrong"});l̥
+        res.status(500).json({message: "Something Wrong"});l̥
     }
 }
 
