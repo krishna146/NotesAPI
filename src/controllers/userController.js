@@ -52,7 +52,7 @@ const signin =async (req, res) =>{
         const existingUser= await userModel.findOne({email: email});
         //check for existing user
         if(!existingUser){
-            return res.status(404).json({messsage: "User Not found"});
+            return res.status(404).json({message: "User Not found"});
         }
         //comparing password from our body password and mongoDb password
         const matchPassword = await bcrypt.compare(password, existingUser.password);//using await keyword since we r interacting with DB
