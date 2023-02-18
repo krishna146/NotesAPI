@@ -33,7 +33,7 @@ app.get("/",(req, res)=>{
 const PORT = process.env.PORT || 5000; //
 
 //connection to our database
-mongoose.connect(process.env.MONGO_URL)//process(node process) object is used to access our environment variable
+mongoose.connect("mongodb+srv://krishnajsw:85212223@cluster0.jqclb.mongodb.net/?retryWrites=true&w=majority")//process(node process) object is used to access our environment variable
 .then(()=>{ //then() callback fun() -> whenever there will be a fn an callback will be called
 //listening on port number 5000
     app.listen(PORT, ()=>{
